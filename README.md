@@ -8,15 +8,19 @@ twitter follower management
 -   [twitter](https://github.com/sixohsix/twitter)
 
 first time:
-    virtualenv -p python3 env
-    source env/bin/activate
-    pip install twitter
-    deactivate
+```
+virtualenv -p python3 env
+source env/bin/activate
+pip install twitter
+deactivate
+```
 
 next time:
-    source env/bin/activate
-    python run.py
-    deactivate
+```
+source env/bin/activate
+python run.py
+deactivate
+```
 
 Before you start you have to create a settings file. Rename the
 `settings.json.sample` to `settings.json`. Then you have to create a
