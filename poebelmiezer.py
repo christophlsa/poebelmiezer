@@ -6,14 +6,14 @@ class Poebelmiezer:
     :param oauth: twitter.OAuth object for twitter
     """
     def __init__(self, oauth):
-        self.to_follow = {}
+        self.to_follow = set()
         self.all_follower = []
         self.t = Twitter(auth = oauth)
 
     """follow all users found with the other functions (follower list)"""
     def follow_all(self):
-        for f in self.to_follow:
-            self.t.friendships.create(user_id=f['id'])
+        for f_id in self.to_follow:
+            self.t.friendships.create(user_id=f_id)
         self.to_follow.clear()
 
     """go through all follower and save the non followed and non protected users to the follower list"""
